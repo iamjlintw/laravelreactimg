@@ -1,5 +1,9 @@
 #!/bin/bash
 set -e
+# install composer
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+chmod +rx /usr/bin/composer
+mkdir -p /var/run/php-fpm
 
 # install dependencies
 yum -y groupinstall "Development Tools"

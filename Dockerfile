@@ -21,10 +21,8 @@ RUN yum -y install epel-release yum-utils && \
 # source: https://getcomposer.org/download/
 ##
 
-#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
-#RUN chmod +rx /usr/bin/composer
-RUN mkdir -p /var/run/php-fpm
-# Install v8js php extension
+
+# Install cli and v8js php extension
 COPY scripts/install-v8js.sh /install-v8js.sh
 RUN sh /install-v8js.sh && rm /install-v8js.sh
 
