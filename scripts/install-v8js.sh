@@ -8,7 +8,7 @@ mkdir -p /var/run/php-fpm
 # install dependencies
 yum -y groupinstall "Development Tools"
 yum -y install  git  python glib2-devel subversion make g++ python curl chrpath lbzip2 re2c
-yum install nodejs
+yum -y install nodejs
 # depot tools
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git /usr/local/depot_tools
 export PATH=$PATH:/usr/local/depot_tools
